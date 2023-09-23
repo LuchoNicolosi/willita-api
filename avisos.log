@@ -1,0 +1,8 @@
+[2023-09-23 18:15:23] [ ERROR] [ProductController:33] Error creating product - Cannot invoke "com.pastry.pastryapi.models.Category.getCategoryId()" because "res" is null
+[2023-09-23 18:16:29] [ ERROR] [ProductController:33] Error creating product - Category not found
+[2023-09-23 18:16:39] [ ERROR] [ProductController:33] Error creating product - Cannot create a reference to an object with a NULL id
+[2023-09-23 18:17:30] [ ERROR] [ProductController:33] Error creating product - Cannot create a reference to an object with a NULL id
+[2023-09-23 18:19:09] [ ERROR] [ProductController:33] Error creating product - Cannot create a reference to an object with a NULL id
+[2023-09-23 18:22:27] [ ERROR] [ProductController:33] Error creating product - Cannot create a reference to an object with a NULL id
+[2023-09-23 18:23:39] [ ERROR] [ProductController:33] Error creating product - Cannot create a reference to an object with a NULL id
+[2023-09-23 18:25:04] [ ERROR] [ProductController:33] Error creating product - Query { "$java" : Query: { "categoryName" : "Tortas"}, Fields: {}, Sort: {} } returned non unique result
