@@ -1,5 +1,6 @@
 package com.pastry.pastryapi.services;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pastry.pastryapi.dto.Category.CategoryDto;
 import com.pastry.pastryapi.dto.Category.CreateCategoryDto;
@@ -27,13 +28,26 @@ public class CategoryService {
     public CategoryDto createCategory(CreateCategoryDto data) {
         Category category = mapper.convertValue(data, Category.class);
 
-        List<Product> products= new ArrayList<>();
+        List<Product> products = new ArrayList<>();
         category.setProducts(products);
 
         return mapper.convertValue(categoryRepository.save(category), CategoryDto.class);
     }
 
     public List<CategoryDto> getAllCategories() {
-        return Collections.singletonList(mapper.convertValue(categoryRepository.findAll(), CategoryDto.class));
+        return mapper.convertValue(categoryRepository.findAll(), new TypeReference<List<CategoryDto>>() {
+        });
+    }
+
+    public CategoryDto findCategoryByName(String categoryName) {
+        return null;
+    }
+
+    public CategoryDto updateCategory(String categoryName) {
+        return null;
+    }
+
+    public CategoryDto deleteCategory(String categoryName) {
+        return null;
     }
 }
